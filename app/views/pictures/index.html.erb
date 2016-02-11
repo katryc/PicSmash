@@ -1,0 +1,55 @@
+ <p id="notice"><%= notice %></p>
+ <link rel="stylesheet" type="text/css" href="" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta charset= "UTF-8">
+
+
+<header>
+<h2>LET THE BATTLE BEGIN<h2>
+  </header>
+
+<body>
+
+  <ul class="container">
+<li id="pic1">
+<%= image_tag @picture_one.url %>
+  <%= form_for(@picture_one, :url => { action: "vote"}, method: :POST ) do |f| %>
+    <%= f.hidden_field :id, :value => @picture_one.id %>
+    <button><p><%= f.submit "Vote" %></p>
+    <%= @picture_one.vote %>
+    </button>
+  <% end %>
+
+</li>
+  <!-- <div class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+      <span class="sr-only">40% Complete (success)</span>
+    </div>
+  </div>
+</div> -->
+
+
+<li id="pic2">
+  <%= image_tag @picture_two.url %>
+  <%= form_for(@picture_two, :url => { action: "vote"}, method: :POST ) do |f| %>
+    <%= f.hidden_field :id, :value => @picture_two.id %>
+    <button><p><%= f.submit "Vote" %></p>
+      <%= @picture_two.vote %>
+      </button>
+  <% end %>
+</li>
+  <!-- <div class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+      <span class="sr-only">40% Complete (success)</span>
+    </div>
+  </div>
+</div> -->
+</ul>
+
+
+
+<button><%= link_to 'Results', results_path %></button>
+
+
+
+</body>

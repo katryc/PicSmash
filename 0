@@ -1,0 +1,3 @@
+      invoke  active_record
+      remove    db/migrate/20160206204913_change_column.rb
+      create    db/migrate/20160206205121_change_column.rb

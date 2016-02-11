@@ -1,0 +1,16 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="homepage.css">
+</head>
+
+<body>
+<h1>PicSmash</h1>
+<p></p>
+<center><a href="http://www.google.com">Cats</a> <a href="url">link text</a> <a href="url">link text</a> </center>
+</body>
+</html>
+
+<% Category.all.each do |category|%>
+<%=link_to category.name, pictures_path(category: category.name)%>
+<%end%>

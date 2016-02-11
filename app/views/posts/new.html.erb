@@ -1,0 +1,18 @@
+<h1>Upload your photo</h1>
+<hr>
+
+<%= form_for @post, html: { multipart: true } do |f| %>
+<%= f.label :image %>
+<%= f.file_field :image %>
+<%= f.collection_select :cat_id, Category.all, :id, :name, {prompt: "Pick a Category"}%>
+
+
+<hr>
+
+<%= f.label :description %>
+<%= f.text_area :description %>
+<br>
+<hr>
+<button style="color:black;"><%= f.submit %></button>
+
+<% end%>

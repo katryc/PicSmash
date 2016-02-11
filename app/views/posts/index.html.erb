@@ -1,0 +1,15 @@
+<%= will_paginate @posts %>
+
+
+    <h1>Your uploads:</h1>
+    <div id="gallery">
+  <ul id="grid">
+    <% @posts.each do |image, cat_id| %>
+     <li><%= link_to image_tag(image.image.url(:medium)), image %></li>
+
+    <% end %>
+  </ul>
+</div>
+<hr>
+
+<%=link_to "Back", new_post_path %>

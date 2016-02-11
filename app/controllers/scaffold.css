@@ -1,0 +1,25 @@
+body {
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: lightblue;
+  margin-bottom: 50px;
+}
+  /*header {
+    font-family: fantasy;
+    font-size: 30em;
+    background-color: blue;
+    text-align: center;
+    padding: 30px;
+    display: flex;
+  }
+
+  .panel{
+    align-items: center;
+    width: 1008px;
+    height: 400px;
+    background-color: inherit;
+  }*/

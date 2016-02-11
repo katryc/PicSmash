@@ -1,0 +1,19 @@
+
+
+<%= will_paginate @picture %>
+
+
+    <h1>The hottest Ones:</h1>
+    <div id="gallery">
+  <ul id="grid">
+    <% @picture.each do |i| %>
+     <li><%= image_tag i.url%></li>
+     <li><%= i.vote %></li>
+    <% end %>
+  </ul>
+</div>
+
+
+
+
+<hr>
